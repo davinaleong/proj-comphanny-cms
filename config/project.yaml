@@ -1,0 +1,42 @@
+dateModified: 1551606535
+email:
+  fromEmail: comphanny@example.com
+  fromName: Comphanny
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  fd1f04b0-5c66-4a29-8d77-84e8361d1292:
+    name: Common
+plugins:
+  architect:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.2
+siteGroups:
+  63404c82-7eba-42b0-9ed2-01ffc278562e:
+    name: Comphanny
+sites:
+  e2d75038-c4ed-417b-8edb-5a1037eaf3b0:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: Comphanny
+    primary: true
+    siteGroup: 63404c82-7eba-42b0-9ed2-01ffc278562e
+    sortOrder: 1
+system:
+  edition: solo
+  live: true
+  name: Comphanny
+  schemaVersion: 3.1.25
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true

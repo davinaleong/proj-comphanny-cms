@@ -7,3 +7,5 @@ Link to template repo [here](https://github.com/DavinaLeong/proj-comphaanyy-temp
 This CMS is created using [CraftCMS](https://craftcms.com/).
 
 Here is my [personal writeup](https://dev.to/davinaleong/introduction-to-craftcms-1n9a) on CraftCMS on [dev.to](https://dev.to/).
+
+![qrcode to craft writeup](./web/images/devto-craft-qrcode.png)
