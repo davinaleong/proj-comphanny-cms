@@ -1,4 +1,4 @@
-dateModified: 1551615305
+dateModified: 1551615418
 email:
   fromEmail: comphanny@example.com
   fromName: Comphanny
@@ -124,7 +124,7 @@ sections:
       e2d75038-c4ed-417b-8edb-5a1037eaf3b0:
         enabledByDefault: true
         hasUrls: true
-        template: ''
+        template: contact/index.twig
         uriFormat: contact
     type: single
   942fad99-0dfc-48e7-a565-fcfba401a8a3:
