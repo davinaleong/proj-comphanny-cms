@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed6e40d5680ef0b3d326fdb21b79a664",
+    "content-hash": "77543c36e86e1ce1beb159e784b993bf",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -501,6 +501,53 @@
                 "plugin"
             ],
             "time": "2017-07-25T13:26:24+00:00"
+        },
+        {
+            "name": "craftcms/redactor",
+            "version": "2.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/redactor.git",
+                "reference": "e4d96d805af031f4a80e5742e5651f30b55e6bca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/redactor/zipball/e4d96d805af031f4a80e5742e5651f30b55e6bca",
+                "reference": "e4d96d805af031f4a80e5742e5651f30b55e6bca",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Redactor",
+                "handle": "redactor"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\redactor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Edit rich text content in Craft CMS using Redactor by Imperavi.",
+            "keywords": [
+                "Redactor",
+                "cms",
+                "craftcms",
+                "html",
+                "yii2"
+            ],
+            "time": "2019-02-21T13:34:33+00:00"
         },
         {
             "name": "craftcms/server-check",
@@ -1348,6 +1395,66 @@
                 "random"
             ],
             "time": "2018-07-02T15:55:56+00:00"
+        },
+        {
+            "name": "pennebaker/craft-architect",
+            "version": "2.2.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Pennebaker/craft-architect.git",
+                "reference": "964f22f7b760961c8ffad9fde3d8562b9d2a6be4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Pennebaker/craft-architect/zipball/964f22f7b760961c8ffad9fde3d8562b9d2a6be4",
+                "reference": "964f22f7b760961c8ffad9fde3d8562b9d2a6be4",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "require-dev": {
+                "spicyweb/craft-neo": "^2.0",
+                "verbb/super-table": "^2.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Architect",
+                "handle": "architect",
+                "schemaVersion": "2.0.0",
+                "developer": "Pennebaker",
+                "hasCpSettings": false,
+                "hasCpSection": true,
+                "changelogUrl": "https://raw.githubusercontent.com/Pennebaker/craft-architect/master/CHANGELOG.md",
+                "components": {
+                    "architectService": "pennebaker\\architect\\services\\ArchitectService"
+                },
+                "class": "pennebaker\\architect\\Architect"
+            },
+            "autoload": {
+                "psr-4": {
+                    "pennebaker\\architect\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pennebaker",
+                    "homepage": "https://pennebaker.com"
+                }
+            ],
+            "description": "CraftCMS plugin to generate content models from JSON data.",
+            "keywords": [
+                "Architect",
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "time": "2018-11-14T19:50:04+00:00"
         },
         {
             "name": "pixelandtonic/imagine",
