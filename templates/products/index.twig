@@ -28,10 +28,11 @@
             <img src="{{ itemEntry.productBanner.one().getUrl('thumbBannerSm') }}" class="card-img-top" alt="product thumbnail">
           </a>
         <div class="card-body">
-          {# <div class="mb-2">
-            <span class="badge badge-cphy-primary-xlight"><i class="fal fa-mobile"></i> Mobile App</span>
-            <span class="badge badge-cphy-primary-xlight"><i class="fal fa-cloud"></i> Web Service</span>
-          </div> #}
+          <div class="mb-2">
+            {% for category in itemEntry.productTypes %}
+            <span class="badge badge-cphy-primary-xlight"><i class="{{ category.typeIcon }} fa-fw"></i> {{ category.title }}</span>
+            {% endfor %}
+          </div>
 
           <h5 class="card-title">{{ itemEntry.title }}</h5>
           <p><em class="text-muted small">{{ itemEntry.postDate | date(dateFormat) }}</em></p>

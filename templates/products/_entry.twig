@@ -18,8 +18,9 @@
   </div>
 
   <div>
-    <span class="badge badge-cphy-primary-xlight"><i class="fal fa-mobile"></i> Mobile App</span>
-    <span class="badge badge-cphy-primary-xlight"><i class="fal fa-cloud"></i> Web Service</span>
+    {% for category in entry.productTypes %}
+    <span class="badge badge-cphy-primary-xlight"><i class="{{ category.typeIcon }} fa-fw"></i> {{ category.title }}</span>
+    {% endfor %}
   </div>
 
   <img class="img-fluid shadow-sm mb-3" src="{{ entry.productBanner.one().getUrl('pageBanner') }}" alt="product image">

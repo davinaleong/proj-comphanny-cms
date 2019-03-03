@@ -1,4 +1,29 @@
-dateModified: 1551633260
+categoryGroups:
+  c46db0a2-6965-486d-893f-effff9b4b4f1:
+    fieldLayouts:
+      b4276dd1-febe-4064-863a-e6d53b0a09dd:
+        tabs:
+          -
+            fields:
+              457bdcc8-9ea6-4e86-b048-8cd07a773da6:
+                required: false
+                sortOrder: 1
+              9360a1ff-4255-42fa-a58e-b9de94db9098:
+                required: false
+                sortOrder: 2
+            name: Type
+            sortOrder: 1
+    handle: productTypes
+    name: 'Product Types'
+    siteSettings:
+      e2d75038-c4ed-417b-8edb-5a1037eaf3b0:
+        hasUrls: true
+        template: products/_category.twig
+        uriFormat: 'product-types/{slug}'
+    structure:
+      maxLevels: '2'
+      uid: c911fe41-25c1-4e8b-92fd-275a7a5556a1
+dateModified: 1551635078
 email:
   fromEmail: comphanny@example.com
   fromName: Comphanny
@@ -111,6 +136,42 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Date
+  457bdcc8-9ea6-4e86-b048-8cd07a773da6:
+    contentColumnType: text
+    fieldGroup: 3da128c7-3dde-466a-a522-34f005de8634
+    handle: typeDescription
+    instructions: ''
+    name: 'Product Type Description'
+    searchable: true
+    settings:
+      charLimit: '500'
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  4e3b0fd7-0344-47a9-9019-0791d342c2c0:
+    contentColumnType: string
+    fieldGroup: fd1f04b0-5c66-4a29-8d77-84e8361d1292
+    handle: productTypes
+    instructions: ''
+    name: 'Product Types'
+    searchable: true
+    settings:
+      branchLimit: '5'
+      limit: null
+      localizeRelations: false
+      selectionLabel: 'Add a product type'
+      source: 'group:c46db0a2-6965-486d-893f-effff9b4b4f1'
+      sources: '*'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
   5662aa6b-0ca2-4358-911a-64246cbaf912:
     contentColumnType: text
     fieldGroup: fd1f04b0-5c66-4a29-8d77-84e8361d1292
@@ -253,6 +314,23 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
+  9360a1ff-4255-42fa-a58e-b9de94db9098:
+    contentColumnType: text
+    fieldGroup: 3da128c7-3dde-466a-a522-34f005de8634
+    handle: typeIcon
+    instructions: 'The icon of the product type'
+    name: 'Product Type Icon'
+    searchable: true
+    settings:
+      charLimit: '500'
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   a12b4642-5e3e-47db-bc0a-46313fc102f8:
     contentColumnType: text
     fieldGroup: 11a4c139-08e0-4f50-a680-fe62292fe16b
@@ -933,10 +1011,13 @@ sections:
                 fields:
                   36e81bca-7d11-444f-a986-5eec1750f2ce:
                     required: false
+                    sortOrder: 3
+                  4e3b0fd7-0344-47a9-9019-0791d342c2c0:
+                    required: false
                     sortOrder: 2
                   85bce812-c924-4def-99ff-bbacbe7a9ea4:
                     required: true
-                    sortOrder: 3
+                    sortOrder: 4
                   c506b7ea-fb2d-482c-895c-6314a4b3f804:
                     required: true
                     sortOrder: 1
