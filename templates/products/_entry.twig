@@ -71,28 +71,43 @@
 
       {% case 'card' %}
       {# Card #}
+      {% set card = block %}
       <div class="card bg-light border-light-gray shadow-sm mb-3">
         <div class="card-body">
-          <h5 class="card-title">Card</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title">{{ card.heading }}</h5>
+          {% if card.contentPlain %}
+          <p class="card-text">{{ card.contentPlain }}</p>
+          {% endif %}
+          {% if card.contentHtml %}
+          <div class="card-text">{{ card.contentHtml }}</div>
+          {% endif %}
         </div>
       </div>
 
       {% case 'cardImage' %}
       {# Image Card #}
+      {% set imageCard = block %}
       <div class="card bg-light border-light-gray shadow-sm mb-3">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="./images/bg-landing.png" class="card-img" alt="Placeholder">
+            <img src="{{ imageCard.sideImage.one().getUrl('cardThumbLg') }}"
+              class="card-img"
+              alt="card thumbnail">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Image Card</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 class="card-title">{{ imageCard.heading }}</h5>
+              {% if imageCard.contentPlain %}
+              <p class="card-text">{{ imageCard.contentPlain }}</p>
+              {% endif %}
+              {% if imageCard.contentHtml %}
+              <div class="card-text">{{ imageCard.contentHtml }}</div>
+              {% endif %}
             </div>
           </div>
         </div>
       </div>
+
     {% endswitch %}
   {% endfor %}
 </section>
