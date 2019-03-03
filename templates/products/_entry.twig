@@ -1,5 +1,99 @@
 {% extends "_layouts/main" %}
 
 {% block main %}
-<h1>{{ entry.title }}</h1>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb bg-cphy-primary-xlight">
+    <li class="breadcrumb-item"><a href="{{ siteUrl }}"><i class="fal fa-elephant"></i></a></li>
+    <li class="breadcrumb-item"><a href="{{ siteUrl }}products">Products</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ entry.title }}</li>
+  </ol>
+</nav>
+
+<section class="container my-5">
+  <div class="mb-3 d-flex justify-content-center align-items-center">
+    <div class="text-center">
+      <h2 class="section-heading">{{ entry.title }}</h2>
+      <p class="text-italic text-muted">{{ entry.postDate | date(dateFormat) }}</p>
+    </div>
+  </div>
+
+  <div>
+    <span class="badge badge-cphy-primary-xlight"><i class="fal fa-mobile"></i> Mobile App</span>
+    <span class="badge badge-cphy-primary-xlight"><i class="fal fa-cloud"></i> Web Service</span>
+  </div>
+
+  <img class="img-fluid shadow-sm mb-3" src="{{ entry.productBanner.one().getUrl('pageBanner') }}" alt="product image">
+
+  {# Tech Stack #}
+  <div class="card border-0 bg-light-gray shadow-sm mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Tech Stack</h5>
+      <ul>
+        {% for tsRow in entry.techStack %}
+          {% if tsRow.url %}
+          <li>
+            <a href="{{ tsRow.url }}" target="_blank">{{ tsRow.name }}&nbsp;
+              <i class="fal fa-external-link fa-fw"></i></a>
+          </li>
+          {% else %}
+          <li>{{ tsRow.name }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  {% for block in entry.itemPageContent %}
+    {% switch block.type %}
+
+      {% case 'quote' %}
+      {# Blockquote #}
+      {% set quote = block %}
+      <blockquote class="blockquote blockquote-gray shadow-sm mb-3">
+        {% if quote.heading %}
+        <h5 class="blockquote-heading">{{ quote.heading }}</h5>
+        {% endif %}
+        <p>{{ quote.contentPlain }}</p>
+        {% if quote.footer %}
+        <p class="blockquote-footer">{{ quote.footer }}</p>
+        {% endif %}
+      </blockquote>
+
+      {% case 'pageContent' %}
+      {# Customizable HTML Content #}
+      {% set pageContent = block %}
+      {% if pageContent.contentPlain %}
+      <p class="mb-3">{{ pageContent.contentPlain }}</p>
+      {% endif %}
+      {% if pageContent.contentHtml %}
+      <div class="mb-3">{{ pageContent.contentHtml }}</div>
+      {% endif %}
+
+      {% case 'card' %}
+      {# Card #}
+      <div class="card bg-light border-light-gray shadow-sm mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Card</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+
+      {% case 'cardImage' %}
+      {# Image Card #}
+      <div class="card bg-light border-light-gray shadow-sm mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="./images/bg-landing.png" class="card-img" alt="Placeholder">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Image Card</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endswitch %}
+  {% endfor %}
+</section>
 {% endblock %}
