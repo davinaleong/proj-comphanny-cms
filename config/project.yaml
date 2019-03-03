@@ -1,14 +1,28 @@
-dateModified: 1551618086
+dateModified: 1551623239
 email:
   fromEmail: comphanny@example.com
   fromName: Comphanny
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
+  11a4c139-08e0-4f50-a680-fe62292fe16b:
+    name: Company
   b882c19e-9c8f-4b94-a6e8-d98af21f6caf:
     name: About
   fd1f04b0-5c66-4a29-8d77-84e8361d1292:
     name: Common
 fields:
+  014e6c9d-aafb-4767-a71a-856958d56c3d:
+    contentColumnType: boolean
+    fieldGroup: 11a4c139-08e0-4f50-a680-fe62292fe16b
+    handle: isFounder
+    instructions: 'Indicate if staff is company founder'
+    name: 'Is Founder'
+    searchable: true
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
   3beb45b5-1b65-4b56-9530-dca1674ab01e:
     contentColumnType: string
     fieldGroup: fd1f04b0-5c66-4a29-8d77-84e8361d1292
@@ -51,6 +65,20 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  44ae2fbe-0add-4691-9585-412043036bf9:
+    contentColumnType: datetime
+    fieldGroup: 11a4c139-08e0-4f50-a680-fe62292fe16b
+    handle: joinedDate
+    instructions: 'The date that the staff joined the company'
+    name: 'Joined Date'
+    searchable: true
+    settings:
+      minuteIncrement: '60'
+      showDate: true
+      showTime: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
   5662aa6b-0ca2-4358-911a-64246cbaf912:
     contentColumnType: text
     fieldGroup: fd1f04b0-5c66-4a29-8d77-84e8361d1292
@@ -69,6 +97,33 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
+  60006ef0-dde8-4e41-be3d-56a93d26b242:
+    contentColumnType: string
+    fieldGroup: 11a4c139-08e0-4f50-a680-fe62292fe16b
+    handle: profileImage
+    instructions: ''
+    name: 'Profile Image'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:4819b2f4-6231-466c-908f-96633885cd58'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:c5545297-3c20-42eb-9d7a-6e914b34ecba'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:4819b2f4-6231-466c-908f-96633885cd58'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
   73157979-814e-433c-8213-d8744f299bd6:
     contentColumnType: text
     fieldGroup: b882c19e-9c8f-4b94-a6e8-d98af21f6caf
@@ -86,6 +141,25 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  765f79a6-6214-4cc4-993f-832864ebb97d:
+    contentColumnType: text
+    fieldGroup: 11a4c139-08e0-4f50-a680-fe62292fe16b
+    handle: profileBody
+    instructions: 'Main content of a staff''s profile'
+    name: 'Profile Body'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes:
+        - 4819b2f4-6231-466c-908f-96633885cd58
+      cleanupHtml: '1'
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
   7edf7b39-7737-4f87-83e1-6d6bf312ad4d:
     contentColumnType: text
     fieldGroup: b882c19e-9c8f-4b94-a6e8-d98af21f6caf
@@ -120,6 +194,67 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  a12b4642-5e3e-47db-bc0a-46313fc102f8:
+    contentColumnType: text
+    fieldGroup: 11a4c139-08e0-4f50-a680-fe62292fe16b
+    handle: byline
+    instructions: 'The staff''s byline or brief description of own personality'
+    name: Byline
+    searchable: true
+    settings:
+      charLimit: '500'
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  c3a35e9b-a1d5-4d28-b978-d6bf59d68e48:
+    contentColumnType: string
+    fieldGroup: b882c19e-9c8f-4b94-a6e8-d98af21f6caf
+    handle: aboutPageBanner
+    instructions: ''
+    name: 'About Page Banner'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:c5545297-3c20-42eb-9d7a-6e914b34ecba'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:c5545297-3c20-42eb-9d7a-6e914b34ecba'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:c5545297-3c20-42eb-9d7a-6e914b34ecba'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  e0636c64-ec4a-4ec3-ad06-a1b8f6d892dc:
+    contentColumnType: text
+    fieldGroup: 11a4c139-08e0-4f50-a680-fe62292fe16b
+    handle: titlePosition
+    instructions: 'The staff''s title and positon'
+    name: 'Title & Position'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   f00afdc4-cf64-49e2-a2f9-be1394891fee:
     contentColumnType: text
     fieldGroup: fd1f04b0-5c66-4a29-8d77-84e8361d1292
@@ -137,6 +272,22 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  f6d740f0-9f36-4bd7-899d-a5a0c219cf77:
+    contentColumnType: smallint(1)
+    fieldGroup: 11a4c139-08e0-4f50-a680-fe62292fe16b
+    handle: profileOrder
+    instructions: "Sorting order of profiles as it appears on the website.\r\nFor default sorting, set it to zero (0)."
+    name: 'Profile Order'
+    searchable: true
+    settings:
+      decimals: 0
+      defaultValue: '0'
+      max: '5'
+      min: '0'
+      size: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
 imageTransforms:
   3b5b0809-6c19-439f-949a-64e023128ad7:
     format: null
@@ -262,12 +413,40 @@ sections:
     enableVersioning: true
     entryTypes:
       66a2d7b7-9d49-4844-bd2e-b8eb9d7161f3:
+        fieldLayouts:
+          19fffde0-a292-4ac2-87aa-f50ccc2f66cf:
+            tabs:
+              -
+                fields:
+                  014e6c9d-aafb-4767-a71a-856958d56c3d:
+                    required: false
+                    sortOrder: 5
+                  44ae2fbe-0add-4691-9585-412043036bf9:
+                    required: true
+                    sortOrder: 3
+                  60006ef0-dde8-4e41-be3d-56a93d26b242:
+                    required: true
+                    sortOrder: 1
+                  765f79a6-6214-4cc4-993f-832864ebb97d:
+                    required: true
+                    sortOrder: 7
+                  a12b4642-5e3e-47db-bc0a-46313fc102f8:
+                    required: false
+                    sortOrder: 4
+                  e0636c64-ec4a-4ec3-ad06-a1b8f6d892dc:
+                    required: true
+                    sortOrder: 2
+                  f6d740f0-9f36-4bd7-899d-a5a0c219cf77:
+                    required: false
+                    sortOrder: 6
+                name: Company
+                sortOrder: 1
         handle: company
         hasTitleField: true
         name: Company
         sortOrder: 1
         titleFormat: ''
-        titleLabel: Title
+        titleLabel: Name
     handle: company
     name: Company
     propagateEntries: true
@@ -275,7 +454,7 @@ sections:
       e2d75038-c4ed-417b-8edb-5a1037eaf3b0:
         enabledByDefault: true
         hasUrls: true
-        template: company/entry
+        template: company/_staff.twig
         uriFormat: 'company/{slug}'
     type: channel
   b056c259-c354-4920-b190-3028a2c5a441:
@@ -287,9 +466,6 @@ sections:
             tabs:
               -
                 fields:
-                  3beb45b5-1b65-4b56-9530-dca1674ab01e:
-                    required: true
-                    sortOrder: 3
                   40aa7dd3-251d-4ca0-a822-f150f903c950:
                     required: false
                     sortOrder: 4
@@ -302,6 +478,9 @@ sections:
                   7edf7b39-7737-4f87-83e1-6d6bf312ad4d:
                     required: true
                     sortOrder: 1
+                  c3a35e9b-a1d5-4d28-b978-d6bf59d68e48:
+                    required: true
+                    sortOrder: 3
                 name: About
                 sortOrder: 1
         handle: about
