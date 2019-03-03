@@ -1,11 +1,48 @@
-dateModified: 1551606535
+dateModified: 1551608919
 email:
   fromEmail: comphanny@example.com
   fromName: Comphanny
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
+  9f613df5-28dc-4308-9318-dcd91992f72f:
+    name: Home
   fd1f04b0-5c66-4a29-8d77-84e8361d1292:
     name: Common
+fields:
+  2bf036ae-b67b-41c5-992f-581191ca7efb:
+    contentColumnType: text
+    fieldGroup: 9f613df5-28dc-4308-9318-dcd91992f72f
+    handle: siteTitle
+    instructions: 'The Title of the website on the homepage'
+    name: 'Site Title'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f4a6905b-0cb5-4d39-8468-b427cef6dd77:
+    contentColumnType: text
+    fieldGroup: 9f613df5-28dc-4308-9318-dcd91992f72f
+    handle: sitetagline
+    instructions: 'The tagline on the homepage'
+    name: 'Site Tagline'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
 plugins:
   architect:
     edition: standard
@@ -15,6 +52,87 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.2.2
+sections:
+  191ff4d9-22bf-4fc1-a47b-1123392d5f47:
+    enableVersioning: true
+    entryTypes:
+      0334a6c4-8346-48b7-94fb-3f80699e785d:
+        handle: home
+        hasTitleField: '0'
+        name: Home
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: null
+    handle: home
+    name: Home
+    propagateEntries: true
+    siteSettings:
+      e2d75038-c4ed-417b-8edb-5a1037eaf3b0:
+        enabledByDefault: true
+        hasUrls: true
+        template: index
+        uriFormat: __home__
+    type: single
+  750379a3-ba67-4a47-a6cc-e9b79bfca59f:
+    enableVersioning: true
+    entryTypes:
+      b9d8c4f7-66f2-4dc3-a6d1-cc8525bf3a89:
+        handle: products
+        hasTitleField: true
+        name: Products
+        sortOrder: 1
+        titleFormat: null
+        titleLabel: Title
+    handle: products
+    name: Products
+    propagateEntries: true
+    siteSettings:
+      e2d75038-c4ed-417b-8edb-5a1037eaf3b0:
+        enabledByDefault: true
+        hasUrls: true
+        template: products/entry
+        uriFormat: 'products/{slug}'
+    type: channel
+  82a69350-9107-4234-a575-59ba64b45ed5:
+    enableVersioning: true
+    entryTypes:
+      afbf0700-9b7e-4719-b604-c41c2ef56d0f:
+        handle: contact
+        hasTitleField: false
+        name: Contact
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: null
+    handle: contact
+    name: Contact
+    propagateEntries: true
+    siteSettings:
+      e2d75038-c4ed-417b-8edb-5a1037eaf3b0:
+        enabledByDefault: true
+        hasUrls: true
+        template: ''
+        uriFormat: contact
+    type: single
+  942fad99-0dfc-48e7-a565-fcfba401a8a3:
+    enableVersioning: true
+    entryTypes:
+      66a2d7b7-9d49-4844-bd2e-b8eb9d7161f3:
+        handle: company
+        hasTitleField: true
+        name: Company
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: company
+    name: Company
+    propagateEntries: true
+    siteSettings:
+      e2d75038-c4ed-417b-8edb-5a1037eaf3b0:
+        enabledByDefault: true
+        hasUrls: true
+        template: company/entry
+        uriFormat: 'company/{slug}'
+    type: channel
 siteGroups:
   63404c82-7eba-42b0-9ed2-01ffc278562e:
     name: Comphanny
