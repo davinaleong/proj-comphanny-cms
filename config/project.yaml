@@ -1,48 +1,62 @@
-dateModified: 1551611599
+dateModified: 1551615305
 email:
   fromEmail: comphanny@example.com
   fromName: Comphanny
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
-  9f613df5-28dc-4308-9318-dcd91992f72f:
-    name: Home
   fd1f04b0-5c66-4a29-8d77-84e8361d1292:
     name: Common
-fields:
-  2bf036ae-b67b-41c5-992f-581191ca7efb:
-    contentColumnType: text
-    fieldGroup: 9f613df5-28dc-4308-9318-dcd91992f72f
-    handle: siteTitle
-    instructions: 'The Title of the website on the homepage'
-    name: 'Site Title'
-    searchable: true
-    settings:
-      charLimit: ''
-      code: ''
-      columnType: text
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  f4a6905b-0cb5-4d39-8468-b427cef6dd77:
-    contentColumnType: text
-    fieldGroup: 9f613df5-28dc-4308-9318-dcd91992f72f
-    handle: sitetagline
-    instructions: 'The tagline on the homepage'
-    name: 'Site Tagline'
-    searchable: true
-    settings:
-      charLimit: ''
-      code: ''
-      columnType: text
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
+imageTransforms:
+  3b5b0809-6c19-439f-949a-64e023128ad7:
+    format: null
+    handle: thumbBanner
+    height: '195'
+    interlace: none
+    mode: crop
+    name: 'Thumb Banner'
+    position: center-center
+    quality: null
+    width: '347'
+  65cdef0b-c238-4005-b65a-4ba831221824:
+    format: null
+    handle: thumbBannerLg
+    height: '302'
+    interlace: none
+    mode: crop
+    name: 'Thumb Banner Large'
+    position: center-center
+    quality: null
+    width: '538'
+  9df14a11-c54f-4004-8019-0a59a11ba789:
+    format: null
+    handle: profileSm
+    height: '155'
+    interlace: none
+    mode: crop
+    name: 'Profile Small'
+    position: center-center
+    quality: null
+    width: '116'
+  aabb7f35-70e2-44b9-8ddb-d76430265137:
+    format: null
+    handle: profileLg
+    height: '276'
+    interlace: none
+    mode: crop
+    name: 'Profile Large'
+    position: center-center
+    quality: null
+    width: '369'
+  e8607822-82c3-45da-9ff0-d610e946101f:
+    format: null
+    handle: pageBanner
+    height: '624'
+    interlace: none
+    mode: crop
+    name: 'Page Banner'
+    position: center-center
+    quality: null
+    width: '1110'
 plugins:
   architect:
     edition: standard
@@ -158,3 +172,31 @@ users:
   photoSubpath: ''
   photoVolumeUid: null
   requireEmailVerification: true
+volumes:
+  4819b2f4-6231-466c-908f-96633885cd58:
+    handle: profiles
+    hasUrls: true
+    name: Profiles
+    settings:
+      path: /Users/davina/Developer/proj-comphanny-cms/web/uploads/profiles
+    sortOrder: 3
+    type: craft\volumes\Local
+    url: //proj-comphanny-cms.test/uploads/profiles
+  c5545297-3c20-42eb-9d7a-6e914b34ecba:
+    handle: about
+    hasUrls: true
+    name: About
+    settings:
+      path: /Users/davina/Developer/proj-comphanny-cms/web/uploads/about
+    sortOrder: '1'
+    type: craft\volumes\Local
+    url: //proj-comphanny-cms.test/uploads/about
+  f15fa10d-026b-4f9c-88f5-ca84334c8615:
+    handle: products
+    hasUrls: true
+    name: Products
+    settings:
+      path: /Users/davina/Developer/proj-comphanny-cms/web/uploads/products
+    sortOrder: 2
+    type: craft\volumes\Local
+    url: //proj-comphanny-cms.test/uploads/products
