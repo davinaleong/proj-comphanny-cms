@@ -1,4 +1,4 @@
-dateModified: 1551623239
+dateModified: 1551624579
 email:
   fromEmail: comphanny@example.com
   fromName: Comphanny
@@ -437,7 +437,7 @@ sections:
                     required: true
                     sortOrder: 2
                   f6d740f0-9f36-4bd7-899d-a5a0c219cf77:
-                    required: false
+                    required: true
                     sortOrder: 6
                 name: Company
                 sortOrder: 1
