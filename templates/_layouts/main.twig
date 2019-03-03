@@ -1,0 +1,76 @@
+{% set dateFormat   = "F d, Y" %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>com:Phanny</title>
+
+  {% set stylesRoot = siteUrl ~ "styles/" %}
+  {% set vendorRoot = siteUrl ~ "vendor/" %}
+  {% set imagesRoot = siteUrl ~ "images/" %}
+
+  {% do view.registerCssFile(stylesRoot ~ "styles.css") %}
+  {% do view.registerCssFile(vendorRoot ~ "fontawesome/css/all.min.css") %}
+  {% do view.registerJsFile(vendorRoot ~ "jquery/dist/jquery.js") %}
+  {% do view.registerJsFile(vendorRoot ~ "jquery.min.js") %}
+  {% do view.registerJsFile(vendorRoot ~ "popper.min.js") %}
+  {% do view.registerJsFile(vendorRoot ~ "bootstrap/js/bootstrap.min.js") %}
+  
+  <link rel="shortcut icon" href="./comphanny-icon-color.png" type="image/png">
+</head>
+<body id="top">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-cphy-primary shadow-sm">
+    <a class="navbar-brand" href="{{ siteUrl }}">
+      <i class="fas fa-elephant" style="width:-100%;"></i>&nbsp;
+      com:Phanny
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ siteUrl }}products">
+            <i class="fas fa-box fa-fw"></i> Products
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ siteUrl }}about">
+            <i class="fas fa-elephant fa-fw"></i> About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ siteUrl }}contact">
+            <i class="fas fa-phone"></i> Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    {% block main %}
+    {% endblock %}
+  </main>
+
+  <footer class="container-fluid bg-dark text-light px-3 py-3">
+    <div class="text-center">
+      <h6 class="text-weight-normal text-italic">Need a <span class="text-cphy-secondary-light">digital product</span>?</h6>
+      <p><a href="{{ siteUrl }}contact" class="text-cphy-secondary">Contact us</a> at:<br>
+        +65 9369 3752<br>
+        comphanny@example.com
+      </p>
+      <p>Find us at:<br>
+        Street #unit-no building, zip code
+      </p>
+    </div>
+    <p class="text-center text-muted text-italic small">Handcrafted by Davina Leong</p>
+  </footer>
+
+  <a class="btn btn-cphy-secondary btn-floating-action shadow-sm" href="#top">
+    <i class="fa fa-angle-up fa-2x"></i>
+  </a>
+</body>
+</html>

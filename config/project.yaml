@@ -1,4 +1,4 @@
-dateModified: 1551608919
+dateModified: 1551610932
 email:
   fromEmail: comphanny@example.com
   fromName: Comphanny
@@ -57,21 +57,21 @@ sections:
     enableVersioning: true
     entryTypes:
       0334a6c4-8346-48b7-94fb-3f80699e785d:
-        handle: home
+        handle: homepage
         hasTitleField: '0'
-        name: Home
+        name: Homepage
         sortOrder: 1
         titleFormat: '{section.name|raw}'
         titleLabel: null
-    handle: home
-    name: Home
+    handle: homepage
+    name: Homepage
     propagateEntries: true
     siteSettings:
       e2d75038-c4ed-417b-8edb-5a1037eaf3b0:
         enabledByDefault: true
         hasUrls: true
-        template: index
-        uriFormat: __home__
+        template: index.twig
+        uriFormat: /
     type: single
   750379a3-ba67-4a47-a6cc-e9b79bfca59f:
     enableVersioning: true
