@@ -1,11 +1,142 @@
-dateModified: 1551615418
+dateModified: 1551618086
 email:
   fromEmail: comphanny@example.com
   fromName: Comphanny
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
+  b882c19e-9c8f-4b94-a6e8-d98af21f6caf:
+    name: About
   fd1f04b0-5c66-4a29-8d77-84e8361d1292:
     name: Common
+fields:
+  3beb45b5-1b65-4b56-9530-dca1674ab01e:
+    contentColumnType: string
+    fieldGroup: fd1f04b0-5c66-4a29-8d77-84e8361d1292
+    handle: pageBanner
+    instructions: 'The page''s large banner image'
+    name: 'Page Banner'
+    searchable: true
+    settings:
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:c5545297-3c20-42eb-9d7a-6e914b34ecba'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:c5545297-3c20-42eb-9d7a-6e914b34ecba'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  40aa7dd3-251d-4ca0-a822-f150f903c950:
+    contentColumnType: text
+    fieldGroup: fd1f04b0-5c66-4a29-8d77-84e8361d1292
+    handle: imageAltText
+    instructions: 'The the alt attribute of an image'
+    name: 'Image Alt Text'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  5662aa6b-0ca2-4358-911a-64246cbaf912:
+    contentColumnType: text
+    fieldGroup: fd1f04b0-5c66-4a29-8d77-84e8361d1292
+    handle: bodyHtml
+    instructions: 'Limited HTML content editor'
+    name: 'Body HTML'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: '1'
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  73157979-814e-433c-8213-d8744f299bd6:
+    contentColumnType: text
+    fieldGroup: b882c19e-9c8f-4b94-a6e8-d98af21f6caf
+    handle: blockquoteContent
+    instructions: 'The blockquote''s content'
+    name: 'Blockquote Content'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7edf7b39-7737-4f87-83e1-6d6bf312ad4d:
+    contentColumnType: text
+    fieldGroup: b882c19e-9c8f-4b94-a6e8-d98af21f6caf
+    handle: blockquoteHeading
+    instructions: 'The about page''s quote heading'
+    name: 'Blockquote Heading'
+    searchable: true
+    settings:
+      charLimit: '500'
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  8803ee0c-7d81-40eb-9c69-14b0be90dfb7:
+    contentColumnType: text
+    fieldGroup: fd1f04b0-5c66-4a29-8d77-84e8361d1292
+    handle: bodyPlain
+    instructions: ''
+    name: 'Body Plain'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f00afdc4-cf64-49e2-a2f9-be1394891fee:
+    contentColumnType: text
+    fieldGroup: fd1f04b0-5c66-4a29-8d77-84e8361d1292
+    handle: text
+    instructions: ''
+    name: Text
+    searchable: true
+    settings:
+      charLimit: '500'
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
 imageTransforms:
   3b5b0809-6c19-439f-949a-64e023128ad7:
     format: null
@@ -147,6 +278,48 @@ sections:
         template: company/entry
         uriFormat: 'company/{slug}'
     type: channel
+  b056c259-c354-4920-b190-3028a2c5a441:
+    enableVersioning: true
+    entryTypes:
+      62d0b1c7-4086-41a1-9cb0-1c33b92fe123:
+        fieldLayouts:
+          1596cc38-2225-4058-9aca-8ba132d1e6a6:
+            tabs:
+              -
+                fields:
+                  3beb45b5-1b65-4b56-9530-dca1674ab01e:
+                    required: true
+                    sortOrder: 3
+                  40aa7dd3-251d-4ca0-a822-f150f903c950:
+                    required: false
+                    sortOrder: 4
+                  5662aa6b-0ca2-4358-911a-64246cbaf912:
+                    required: true
+                    sortOrder: 5
+                  73157979-814e-433c-8213-d8744f299bd6:
+                    required: true
+                    sortOrder: 2
+                  7edf7b39-7737-4f87-83e1-6d6bf312ad4d:
+                    required: true
+                    sortOrder: 1
+                name: About
+                sortOrder: 1
+        handle: about
+        hasTitleField: false
+        name: About
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: ''
+    handle: about
+    name: About
+    propagateEntries: true
+    siteSettings:
+      e2d75038-c4ed-417b-8edb-5a1037eaf3b0:
+        enabledByDefault: true
+        hasUrls: true
+        template: about/_entry.twig
+        uriFormat: about
+    type: single
 siteGroups:
   63404c82-7eba-42b0-9ed2-01ffc278562e:
     name: Comphanny
