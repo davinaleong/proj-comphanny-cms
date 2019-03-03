@@ -1,5 +1,50 @@
 {% extends "_layouts/main" %}
 
 {% block main %}
-<h1>{{ entry.title }}</h1>
+{% set profileEntry = entry %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb bg-cphy-primary-xlight">
+    <li class="breadcrumb-item"><a href="{{ siteUrl }}"><i class="fal fa-elephant"></i></a></li>
+    <li class="breadcrumb-item"><a href="{{ siteUrl }}about">About</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Staff</li>
+  </ol>
+</nav>
+
+<section class="container my-5">
+  <div class="mb-3 d-flex justify-content-center align-items-center">
+    <div class="text-center">
+      <h2 class="section-heading">
+        {% if profileEntry.isFounder %}
+          <i class="fal fa-lightbulb-on text-cphy-secondary-dark"></i>&nbsp;
+        {% endif %}
+        {{ profileEntry.title }}
+      </h2>
+      <p class="text-italic">{{ profileEntry.titlePosition }}</p>
+    </div>
+  </div>
+
+  <div class="card bg-light border-light-gray shadow-sm mb-3">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img
+          src="{{ profileEntry.profileImage.one().getUrl('profileLg') }}"
+          class="card-img"
+          alt="{{ profileEntry.title}} profile pic">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h4 class="card-title">{{ profileEntry.title }}</h4>
+          <h5 class="card-subtitle mb-2">{{ profileEntry.titlePosition }}</h5>
+          <p class="text-muted text-italic">Joined in {{ profileEntry.joinedDate | date(dateFormat) }}</p>
+          <blockquote class="blockquote card-text text-italic">{{ profileEntry.byline }}</blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom HTML -->
+  <div class="mb-3">
+    {{ profileEntry.profileBody }}
+  </div>
+</section>
 {% endblock %}
