@@ -1,6 +1,7 @@
 {% extends "_layouts/main" %}
 
 {% block main %}
+{% set aboutEntry = entry %}
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="{{ siteUrl }}"><i class="fal fa-elephant"></i></a></li>
@@ -15,20 +16,20 @@
 
   <!-- Tagline -->
   <blockquote class="blockquote blockquote-primary">
-    <h5 class="blockquote-heading">{{ entry.blockquoteHeading }}</h5>
-    <p>{{ entry.blockquoteContent }}</p>
+    <h5 class="blockquote-heading">{{ aboutEntry.blockquoteHeading }}</h5>
+    <p>{{ aboutEntry.blockquoteContent }}</p>
   </blockquote>
 
   <!-- Banner -->
-  {% set bannerImage = entry.aboutPageBanner.one() %}
+  {% set bannerImage = aboutEntry.aboutPageBanner.one() %}
   <img
     class="img-fluid shadow-sm mb-3"
     src="{{ bannerImage.getUrl('pageBanner') }}"
-    alt="{{ entry.imageAltText }}">
+    alt="{{ aboutEntry.imageAltText }}">
 
   <!-- Custom HTML -->
   <div class="mb-5">
-    {{ entry.bodyHtml }}
+    {{ aboutEntry.bodyHtml }}
   </div>
   <hr>
 
@@ -60,7 +61,7 @@
             <div class="card-body">
               <h5 class="card-title">
                 {% if profileEntry.isFounder %}
-                <i class="fal fa-lightbulb-on text-cphy-secondary-dark"></i>&nbsp;
+                  <i class="fal fa-lightbulb-on text-cphy-secondary-dark"></i>&nbsp;
                 {% endif %}
                 {{ profileEntry.title }}
               </h5>
