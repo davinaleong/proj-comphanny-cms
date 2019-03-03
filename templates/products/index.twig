@@ -1,0 +1,131 @@
+{% extends "_layouts/main" %}
+
+{% block main %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="./"><i class="fal fa-elephant"></i></a></li>
+    <li class="breadcrumb-item active" aria-current="page">Products</li>
+  </ol>
+</nav>
+
+{% set productEntry = entry %}
+<section class="container my-5">
+  <div class="mb-3 d-flex justify-content-center align-items-center">
+    <h2 class="section-heading"><i class="fal fa-box"></i> Products</h2>
+  </div>
+
+  {% if productEntry.productHtml %}
+  <div class="mb-3">{{ productEntry.productHtml }}</div>
+  {% endif %}
+
+  <div class="row">
+    <div class="col-12 col-lg-4">
+        <div class="card mb-3 shadow-sm">
+        <a href="./product-item.html">
+            <img src="./images/bg-landing.png" class="card-img-top" alt="...">
+          </a>
+        <div class="card-body">
+          <div class="mb-2">
+            <span class="badge badge-cphy-primary-xlight"><i class="fal fa-mobile"></i> Mobile App</span>
+            <span class="badge badge-cphy-primary-xlight"><i class="fal fa-cloud"></i> Web Service</span>
+          </div>
+
+          <h5 class="card-title">Social App</h5>
+          <p><em class="text-muted small">01 Feb 2019</em></p>
+
+          <a href="./product-item.html" class="btn btn-primary btn-sm">View more <i class="fal fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+      <div class="card mb-3 shadow-sm">
+        <a href="./product-item.html">
+            <img src="./images/bg-landing.png" class="card-img-top" alt="...">
+          </a>
+        <div class="card-body">
+          <div class="mb-1">
+            <span class="badge badge-cphy-primary-xlight"><i class="fal fa-browser"></i> Website</span>
+          </div>
+
+          <h5 class="card-title">Website</h5>
+          <p><em class="text-muted small">01 Feb 2019</em></p>
+
+          <a href="./product-item.html" class="btn btn-primary btn-sm">View more <i class="fal fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+      <div class="card mb-3 shadow-sm">
+        <a href="./product-item.html">
+          <img src="./images/bg-landing.png" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+          <div class="mb-1">
+            <span class="badge badge-cphy-primary-xlight"><i class="fal fa-globe"></i> Web App</span>
+          </div>
+          <h5 class="card-title">Web App</h5>
+          <p><em class="text-muted small">01 Feb 2019</em></p>
+
+          <a href="./product-item.html" class="btn btn-primary btn-sm">View more <i class="fal fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+      <div class="card mb-3 shadow-sm">
+        <a href="./product-item.html">
+          <img src="./images/bg-landing.png" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+          <div class="mb-1">
+            <span class="badge badge-cphy-primary-xlight"><i class="fal fa-browser"></i> Website</span>
+          </div>
+
+          <h5 class="card-title">Website</h5>
+          <p><em class="text-muted small">01 Feb 2019</em></p>
+
+          <a href="./product-item.html" class="btn btn-primary btn-sm">View more <i class="fal fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+      <div class="card mb-3 shadow-sm">
+        <a href="./product-item.html">
+          <img src="./images/bg-landing.png" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+          <div class="mb-1">
+            <span class="badge badge-cphy-primary-xlight"><i class="fal fa-cloud"></i> Web Service</span>
+          </div>
+
+          <h5 class="card-title">Web Service</h5>
+          <p><em class="text-muted small">01 Feb 2019</em></p>
+
+          <a href="./product-item.html" class="btn btn-primary btn-sm">View more <i class="fal fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+      <div class="card mb-3 shadow-sm">
+        <a href="./product-item.html">
+          <img src="./images/bg-landing.png" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+          <div class="mb-1">
+              <span class="badge badge-cphy-primary-xlight"><i class="fal fa-mobile"></i> Mobile App</span>
+          </div>
+
+          <h5 class="card-title">Website</h5>
+          <p><em class="text-muted small">01 Feb 2019</em></p>
+
+          <a href="./product-item.html" class="btn btn-primary btn-sm">View more <i class="fal fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div><!-- ./row -->
+</section>
+{% endblock %}

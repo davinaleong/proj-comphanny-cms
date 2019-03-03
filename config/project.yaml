@@ -1,4 +1,4 @@
-dateModified: 1551624579
+dateModified: 1551626917
 email:
   fromEmail: comphanny@example.com
   fromName: Comphanny
@@ -6,6 +6,8 @@ email:
 fieldGroups:
   11a4c139-08e0-4f50-a680-fe62292fe16b:
     name: Company
+  3da128c7-3dde-466a-a522-34f005de8634:
+    name: Product
   b882c19e-9c8f-4b94-a6e8-d98af21f6caf:
     name: About
   fd1f04b0-5c66-4a29-8d77-84e8361d1292:
@@ -238,6 +240,25 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  c6258fc4-3e46-4cd8-a367-bd83edca4f7d:
+    contentColumnType: text
+    fieldGroup: 3da128c7-3dde-466a-a522-34f005de8634
+    handle: productHtml
+    instructions: ''
+    name: 'Product Html'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes:
+        - f15fa10d-026b-4f9c-88f5-ca84334c8615
+      cleanupHtml: '1'
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
   e0636c64-ec4a-4ec3-ad06-a1b8f6d892dc:
     contentColumnType: text
     fieldGroup: 11a4c139-08e0-4f50-a680-fe62292fe16b
@@ -373,11 +394,21 @@ sections:
     enableVersioning: true
     entryTypes:
       b9d8c4f7-66f2-4dc3-a6d1-cc8525bf3a89:
+        fieldLayouts:
+          258b6883-ed48-4341-9f6a-30e713310118:
+            tabs:
+              -
+                fields:
+                  c6258fc4-3e46-4cd8-a367-bd83edca4f7d:
+                    required: false
+                    sortOrder: 1
+                name: Products
+                sortOrder: 1
         handle: products
         hasTitleField: true
         name: Products
         sortOrder: 1
-        titleFormat: null
+        titleFormat: ''
         titleLabel: Title
     handle: products
     name: Products
@@ -386,9 +417,9 @@ sections:
       e2d75038-c4ed-417b-8edb-5a1037eaf3b0:
         enabledByDefault: true
         hasUrls: true
-        template: products/entry
-        uriFormat: 'products/{slug}'
-    type: channel
+        template: products/index.twig
+        uriFormat: /products
+    type: single
   82a69350-9107-4234-a575-59ba64b45ed5:
     enableVersioning: true
     entryTypes:
@@ -499,6 +530,26 @@ sections:
         template: about/_entry.twig
         uriFormat: about
     type: single
+  ffc7df34-fdb5-457c-aa15-5b93b9146df8:
+    enableVersioning: true
+    entryTypes:
+      e9c310fb-2b5b-4a95-a522-40aba5a5498c:
+        handle: productItem
+        hasTitleField: true
+        name: 'Product Item'
+        sortOrder: 1
+        titleFormat: null
+        titleLabel: Title
+    handle: productItem
+    name: 'Product Item'
+    propagateEntries: true
+    siteSettings:
+      e2d75038-c4ed-417b-8edb-5a1037eaf3b0:
+        enabledByDefault: true
+        hasUrls: true
+        template: products/_entry.twig
+        uriFormat: 'products/{slug}'
+    type: channel
 siteGroups:
   63404c82-7eba-42b0-9ed2-01ffc278562e:
     name: Comphanny
