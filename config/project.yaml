@@ -1,4 +1,4 @@
-dateModified: 1551610932
+dateModified: 1551611599
 email:
   fromEmail: comphanny@example.com
   fromName: Comphanny
@@ -58,11 +58,11 @@ sections:
     entryTypes:
       0334a6c4-8346-48b7-94fb-3f80699e785d:
         handle: homepage
-        hasTitleField: '0'
+        hasTitleField: false
         name: Homepage
         sortOrder: 1
         titleFormat: '{section.name|raw}'
-        titleLabel: null
+        titleLabel: ''
     handle: homepage
     name: Homepage
     propagateEntries: true
