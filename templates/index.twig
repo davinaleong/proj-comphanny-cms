@@ -20,63 +20,37 @@
       <h2 class="section-heading-light"><i class="fal fa-pencil-ruler"></i> The work</h2>
     </div>
 
+    {# TODO: Pull one entry per category #}
+    {% set productEntries = craft.entries.section('productItems')
+      .orderBy('postDate desc')
+      .limit(4).all() %}
     <div class="row">
-      <div class="col-12 col-lg-6">
-        <div class="card mb-3 shadow-sm">
-          <a href="./product-item.html">
-            <img src="./images/bg-landing.png" class="card-img-top" alt="...">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title text-dark"><i class="far fa-browser"></i> Websites</h5>
 
-            <h6><a href="./product-list.html">Featured Website</a></h6>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptas quo exercitationem accusantium velit fugit esse enim harum&hellip;</p>
-            <a href="./product-list.html" class="btn btn-primary btn-sm mt-3">View more <i class="fal fa-arrow-right"></i></a>
+      {% for productEntry in productEntries %}
+        {% if productEntry.isFeatured %}
+        <div class="col-12 col-lg-6">
+          <div class="card mb-3 shadow-sm">
+            <a href="./product-item.html">
+              <img src="{{ productEntry.productBanner.one().getUrl('thumbBanner') }}" class="card-img-top" alt="product banner">
+            </a>
+            <div class="card-body">
+              {# <h5 class="card-title text-dark"><i class="far fa-browser"></i> Websites</h5> #}
+
+              <h6><a href="{{ productEntry.url }}">{{ productEntry.title }}</a></h6>
+              <div class="mb-2">
+                {% for category in productEntry.productTypes %}
+                <span class="badge badge-cphy-primary-xlight"><i class="{{ category.typeIcon }} fa-fw"></i> {{ category.title }}</span>
+                {% endfor %}
+              </div>
+
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptas quo exercitationem accusantium velit fugit esse enim harum&hellip;</p>
+              <a href="{{ productEntry.url }}" class="btn btn-primary btn-sm mt-3">View more <i class="fal fa-arrow-right"></i></a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-12 col-lg-6">
-        <div class="card mb-3 shadow-sm">
-          <a href="./product-item.html">
-            <img src="./images/bg-landing.png" class="card-img-top" alt="...">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title text-dark"><i class="far fa-globe"></i> Web Apps</h5>
+        {% endif %}
+      {% endfor %}
 
-            <h6><a href="./product-item.html">Featured Web App</a></h6>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptas quo exercitationem accusantium velit fugit esse enim harum&hellip;</p>
-            <a href="./product-list.html" class="btn btn-primary btn-sm mt-3">View more <i class="fal fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-6">
-        <div class="card mb-3 shadow-sm">
-          <a href="./product-item.html">
-            <img src="./images/bg-landing.png" class="card-img-top" alt="...">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title text-dark"><i class="far fa-mobile"></i> Mobile Apps</h5>
-
-            <h6><a href="./product-item.html">Featured Mobile App</a></h6>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptas quo exercitationem accusantium velit fugit esse enim harum&hellip;</p>
-            <a href="./product-list.html" class="btn btn-primary btn-sm mt-3">View more <i class="fal fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-6">
-        <div class="card mb-3 shadow-sm">
-          <a href="./product-item.html">
-            <img src="./images/bg-landing.png" class="card-img-top" alt="...">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title text-dark"><i class="far fa-cloud"></i> Web Services</h5>
-
-            <h6><a href="./product-item.html">Featured Web Service</a></h6>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptas quo exercitationem accusantium velit fugit esse enim harum&hellip;</p>
-            <a href="./product-list.html" class="btn btn-primary btn-sm mt-3">View more <i class="fal fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
     </div><!-- ./row -->
   </div><!-- ./container -->
 </section>

@@ -18,7 +18,7 @@
   <div class="mb-3">{{ productEntry.productHtml }}</div>
   {% endif %}
 
-  {% set itemEntries = craft.entries.section('productItem')
+  {% set itemEntries = craft.entries.section('productItems')
     .orderBy('postDate desc').limit(21).all() %}
   <div class="row">
     {% for itemEntry in itemEntries %}
