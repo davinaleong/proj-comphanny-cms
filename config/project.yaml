@@ -23,7 +23,7 @@ categoryGroups:
     structure:
       maxLevels: '2'
       uid: c911fe41-25c1-4e8b-92fd-275a7a5556a1
-dateModified: 1551635744
+dateModified: 1551702737
 email:
   fromEmail: comphanny@example.com
   fromName: Comphanny
@@ -344,6 +344,23 @@ fields:
       columnType: text
       initialRows: '4'
       multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ada36bad-7416-4fc6-b7b1-823fbaeff868:
+    contentColumnType: text
+    fieldGroup: 3da128c7-3dde-466a-a522-34f005de8634
+    handle: productTagline
+    instructions: ''
+    name: 'Product Tagline'
+    searchable: true
+    settings:
+      charLimit: '500'
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
       placeholder: ''
     translationKeyFormat: null
     translationMethod: none
@@ -1028,22 +1045,25 @@ sections:
                 fields:
                   36e81bca-7d11-444f-a986-5eec1750f2ce:
                     required: false
-                    sortOrder: 5
+                    sortOrder: 6
                   4e3b0fd7-0344-47a9-9019-0791d342c2c0:
                     required: false
-                    sortOrder: 4
+                    sortOrder: 5
                   85bce812-c924-4def-99ff-bbacbe7a9ea4:
                     required: true
-                    sortOrder: 6
+                    sortOrder: 7
                   91eb4bde-939b-40e4-9fe7-9e06a48b7c20:
                     required: false
                     sortOrder: 1
+                  ada36bad-7416-4fc6-b7b1-823fbaeff868:
+                    required: false
+                    sortOrder: 3
                   c506b7ea-fb2d-482c-895c-6314a4b3f804:
                     required: true
                     sortOrder: 2
                   dffa1967-b783-4747-82e2-23d1b23371b9:
                     required: false
-                    sortOrder: 3
+                    sortOrder: 4
                 name: Product
                 sortOrder: 1
         handle: productItem
