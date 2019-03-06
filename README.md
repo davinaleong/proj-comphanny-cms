@@ -1,4 +1,4 @@
-# Comphanny CMS `WIP`
+# Comphanny CMS `v1.0.0`
 
 ## Some Links...
 This is the CMS counterpart to the fake Comphanny company I've setup for a CraftCMS demo.
