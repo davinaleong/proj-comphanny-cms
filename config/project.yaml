@@ -1,4 +1,29 @@
-dateModified: 1551624579
+categoryGroups:
+  c46db0a2-6965-486d-893f-effff9b4b4f1:
+    fieldLayouts:
+      b4276dd1-febe-4064-863a-e6d53b0a09dd:
+        tabs:
+          -
+            fields:
+              457bdcc8-9ea6-4e86-b048-8cd07a773da6:
+                required: false
+                sortOrder: 1
+              9360a1ff-4255-42fa-a58e-b9de94db9098:
+                required: false
+                sortOrder: 2
+            name: Type
+            sortOrder: 1
+    handle: productTypes
+    name: 'Product Types'
+    siteSettings:
+      e2d75038-c4ed-417b-8edb-5a1037eaf3b0:
+        hasUrls: true
+        template: products/_category.twig
+        uriFormat: 'product-types/{slug}'
+    structure:
+      maxLevels: '2'
+      uid: c911fe41-25c1-4e8b-92fd-275a7a5556a1
+dateModified: 1551702737
 email:
   fromEmail: comphanny@example.com
   fromName: Comphanny
@@ -6,6 +31,8 @@ email:
 fieldGroups:
   11a4c139-08e0-4f50-a680-fe62292fe16b:
     name: Company
+  3da128c7-3dde-466a-a522-34f005de8634:
+    name: Product
   b882c19e-9c8f-4b94-a6e8-d98af21f6caf:
     name: About
   fd1f04b0-5c66-4a29-8d77-84e8361d1292:
@@ -23,6 +50,36 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
+  36e81bca-7d11-444f-a986-5eec1750f2ce:
+    contentColumnType: text
+    fieldGroup: 3da128c7-3dde-466a-a522-34f005de8634
+    handle: techStack
+    instructions: 'The technology stack used in this project / product'
+    name: 'Tech Stack'
+    searchable: true
+    settings:
+      addRowLabel: 'Add tech stack'
+      columnType: text
+      columns:
+        col1:
+          handle: name
+          heading: Name
+          type: singleline
+          width: ''
+        col2:
+          handle: url
+          heading: URL
+          type: singleline
+          width: ''
+      defaults:
+        row1:
+          col1: ''
+          col2: ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
   3beb45b5-1b65-4b56-9530-dca1674ab01e:
     contentColumnType: string
     fieldGroup: fd1f04b0-5c66-4a29-8d77-84e8361d1292
@@ -79,6 +136,42 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Date
+  457bdcc8-9ea6-4e86-b048-8cd07a773da6:
+    contentColumnType: text
+    fieldGroup: 3da128c7-3dde-466a-a522-34f005de8634
+    handle: typeDescription
+    instructions: ''
+    name: 'Product Type Description'
+    searchable: true
+    settings:
+      charLimit: '500'
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  4e3b0fd7-0344-47a9-9019-0791d342c2c0:
+    contentColumnType: string
+    fieldGroup: fd1f04b0-5c66-4a29-8d77-84e8361d1292
+    handle: productTypes
+    instructions: ''
+    name: 'Product Types'
+    searchable: true
+    settings:
+      branchLimit: '5'
+      limit: null
+      localizeRelations: false
+      selectionLabel: 'Add a product type'
+      source: 'group:c46db0a2-6965-486d-893f-effff9b4b4f1'
+      sources: '*'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
   5662aa6b-0ca2-4358-911a-64246cbaf912:
     contentColumnType: text
     fieldGroup: fd1f04b0-5c66-4a29-8d77-84e8361d1292
@@ -177,6 +270,21 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  85bce812-c924-4def-99ff-bbacbe7a9ea4:
+    contentColumnType: string
+    fieldGroup: 3da128c7-3dde-466a-a522-34f005de8634
+    handle: itemPageContent
+    instructions: ''
+    name: 'Item Page Content'
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_itempagecontent}}'
+      localizeBlocks: false
+      maxBlocks: ''
+      minBlocks: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
   8803ee0c-7d81-40eb-9c69-14b0be90dfb7:
     contentColumnType: text
     fieldGroup: fd1f04b0-5c66-4a29-8d77-84e8361d1292
@@ -194,6 +302,35 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  91eb4bde-939b-40e4-9fe7-9e06a48b7c20:
+    contentColumnType: boolean
+    fieldGroup: 3da128c7-3dde-466a-a522-34f005de8634
+    handle: isFeatured
+    instructions: ''
+    name: Featured
+    searchable: true
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  9360a1ff-4255-42fa-a58e-b9de94db9098:
+    contentColumnType: text
+    fieldGroup: 3da128c7-3dde-466a-a522-34f005de8634
+    handle: typeIcon
+    instructions: 'The icon of the product type'
+    name: 'Product Type Icon'
+    searchable: true
+    settings:
+      charLimit: '500'
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   a12b4642-5e3e-47db-bc0a-46313fc102f8:
     contentColumnType: text
     fieldGroup: 11a4c139-08e0-4f50-a680-fe62292fe16b
@@ -207,6 +344,23 @@ fields:
       columnType: text
       initialRows: '4'
       multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ada36bad-7416-4fc6-b7b1-823fbaeff868:
+    contentColumnType: text
+    fieldGroup: 3da128c7-3dde-466a-a522-34f005de8634
+    handle: productTagline
+    instructions: ''
+    name: 'Product Tagline'
+    searchable: true
+    settings:
+      charLimit: '500'
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
       placeholder: ''
     translationKeyFormat: null
     translationMethod: none
@@ -238,6 +392,68 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  c506b7ea-fb2d-482c-895c-6314a4b3f804:
+    contentColumnType: string
+    fieldGroup: 3da128c7-3dde-466a-a522-34f005de8634
+    handle: productBanner
+    instructions: ''
+    name: 'Product Banner'
+    searchable: true
+    settings:
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:f15fa10d-026b-4f9c-88f5-ca84334c8615'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:c5545297-3c20-42eb-9d7a-6e914b34ecba'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:f15fa10d-026b-4f9c-88f5-ca84334c8615'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  c6258fc4-3e46-4cd8-a367-bd83edca4f7d:
+    contentColumnType: text
+    fieldGroup: 3da128c7-3dde-466a-a522-34f005de8634
+    handle: productHtml
+    instructions: ''
+    name: 'Product Html'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes:
+        - f15fa10d-026b-4f9c-88f5-ca84334c8615
+      cleanupHtml: '1'
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  dffa1967-b783-4747-82e2-23d1b23371b9:
+    contentColumnType: text
+    fieldGroup: 3da128c7-3dde-466a-a522-34f005de8634
+    handle: productDescription
+    instructions: ''
+    name: 'Product Description'
+    searchable: true
+    settings:
+      charLimit: '500'
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   e0636c64-ec4a-4ec3-ad06-a1b8f6d892dc:
     contentColumnType: text
     fieldGroup: 11a4c139-08e0-4f50-a680-fe62292fe16b
@@ -291,41 +507,41 @@ fields:
 imageTransforms:
   3b5b0809-6c19-439f-949a-64e023128ad7:
     format: null
-    handle: thumbBanner
+    handle: thumbBannerSm
     height: '195'
     interlace: none
     mode: crop
-    name: 'Thumb Banner'
+    name: 'Thumb Banner Small'
     position: center-center
     quality: null
     width: '347'
   65cdef0b-c238-4005-b65a-4ba831221824:
     format: null
-    handle: thumbBannerLg
+    handle: thumbBanner
     height: '302'
     interlace: none
     mode: crop
-    name: 'Thumb Banner Large'
+    name: 'Thumb Banner'
     position: center-center
     quality: null
     width: '538'
   9df14a11-c54f-4004-8019-0a59a11ba789:
     format: null
-    handle: profileSm
+    handle: cardThumbSm
     height: '155'
     interlace: none
     mode: crop
-    name: 'Profile Small'
+    name: 'Card Thumb Small'
     position: center-center
     quality: null
     width: '116'
   aabb7f35-70e2-44b9-8ddb-d76430265137:
     format: null
-    handle: profileLg
+    handle: cardThumbLg
     height: '276'
     interlace: none
     mode: crop
-    name: 'Profile Large'
+    name: 'Card Thumb Large'
     position: center-center
     quality: null
     width: '369'
@@ -339,6 +555,315 @@ imageTransforms:
     position: center-center
     quality: null
     width: '1110'
+matrixBlockTypes:
+  166feb77-b689-48b2-8495-8a3b13d38d9b:
+    field: 85bce812-c924-4def-99ff-bbacbe7a9ea4
+    fieldLayouts:
+      8f69a596-1140-459c-a361-2298cbad2e31:
+        tabs:
+          -
+            fields:
+              0fc569f5-5ffa-4aee-8990-37eaa0954947:
+                required: false
+                sortOrder: 1
+              5d0f499d-bd68-4430-9386-f35e34a4c4f6:
+                required: false
+                sortOrder: 2
+              6a67a240-9924-4d96-b17d-02f667935966:
+                required: false
+                sortOrder: 3
+              98acfc9c-7e3a-4915-93ca-54de64963128:
+                required: false
+                sortOrder: 4
+            name: Content
+            sortOrder: 1
+    fields:
+      0fc569f5-5ffa-4aee-8990-37eaa0954947:
+        contentColumnType: text
+        fieldGroup: null
+        handle: heading
+        instructions: ''
+        name: Heading
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      5d0f499d-bd68-4430-9386-f35e34a4c4f6:
+        contentColumnType: string
+        fieldGroup: null
+        handle: sideImage
+        instructions: ''
+        name: 'Side Image'
+        searchable: true
+        settings:
+          allowedKinds:
+            - image
+          defaultUploadLocationSource: 'volume:c5545297-3c20-42eb-9d7a-6e914b34ecba'
+          defaultUploadLocationSubpath: ''
+          limit: '1'
+          localizeRelations: false
+          restrictFiles: '1'
+          selectionLabel: ''
+          singleUploadLocationSource: 'volume:f15fa10d-026b-4f9c-88f5-ca84334c8615'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources:
+            - 'volume:f15fa10d-026b-4f9c-88f5-ca84334c8615'
+          targetSiteId: null
+          useSingleFolder: '1'
+          viewMode: large
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+      6a67a240-9924-4d96-b17d-02f667935966:
+        contentColumnType: text
+        fieldGroup: null
+        handle: contentHtml
+        instructions: 'Use this field for content that requires custom styling'
+        name: 'Content HTML'
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes:
+            - f15fa10d-026b-4f9c-88f5-ca84334c8615
+          cleanupHtml: '1'
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+      98acfc9c-7e3a-4915-93ca-54de64963128:
+        contentColumnType: text
+        fieldGroup: null
+        handle: contentPlain
+        instructions: 'Use this field for content that doesn''t require custom styling'
+        name: 'Content Plain'
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+    handle: cardImage
+    name: 'Image Card'
+    sortOrder: 4
+  2af320ff-5d5b-4a55-877a-5372506da01a:
+    field: 85bce812-c924-4def-99ff-bbacbe7a9ea4
+    fieldLayouts:
+      720b050f-66e7-464b-8714-278f3cbf70b2:
+        tabs:
+          -
+            fields:
+              048f38ba-0760-4cb5-b3b8-7825d5b86dd1:
+                required: false
+                sortOrder: 2
+              c521d730-9f7e-4d96-9472-bfe8e4eec946:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      048f38ba-0760-4cb5-b3b8-7825d5b86dd1:
+        contentColumnType: text
+        fieldGroup: null
+        handle: contentHtml
+        instructions: 'Use this field for content that requires custom styling such as headings, bold, etc.'
+        name: 'Content HTML'
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes:
+            - f15fa10d-026b-4f9c-88f5-ca84334c8615
+          cleanupHtml: '1'
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+      c521d730-9f7e-4d96-9472-bfe8e4eec946:
+        contentColumnType: text
+        fieldGroup: null
+        handle: contentPlain
+        instructions: 'Use this field for content that doesn''t require custom styling'
+        name: 'Content Plain'
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: '1'
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+    handle: pageContent
+    name: 'Page Content'
+    sortOrder: 2
+  52493481-51a0-43af-96b3-4b53761e981b:
+    field: 85bce812-c924-4def-99ff-bbacbe7a9ea4
+    fieldLayouts:
+      84691447-0234-4cb5-a469-0b4003262bbf:
+        tabs:
+          -
+            fields:
+              420243ac-fbf2-484f-908c-7d2151ae2d2e:
+                required: false
+                sortOrder: 3
+              d2094651-c413-4f5b-9ac0-6f93c734f408:
+                required: false
+                sortOrder: 2
+              d37e608d-7f04-4dbb-8d46-88944718211a:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      420243ac-fbf2-484f-908c-7d2151ae2d2e:
+        contentColumnType: text
+        fieldGroup: null
+        handle: footer
+        instructions: ''
+        name: Footer
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      d2094651-c413-4f5b-9ac0-6f93c734f408:
+        contentColumnType: text
+        fieldGroup: null
+        handle: contentPlain
+        instructions: ''
+        name: 'Content Plain'
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      d37e608d-7f04-4dbb-8d46-88944718211a:
+        contentColumnType: text
+        fieldGroup: null
+        handle: heading
+        instructions: ''
+        name: Heading
+        searchable: true
+        settings:
+          charLimit: '500'
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+    handle: quote
+    name: Quote
+    sortOrder: 1
+  dca56809-20bf-4ca7-b883-62e37ef14043:
+    field: 85bce812-c924-4def-99ff-bbacbe7a9ea4
+    fieldLayouts:
+      d2eb5182-500b-46c2-a34d-8c548ad06813:
+        tabs:
+          -
+            fields:
+              1d701a98-391c-4436-a2fe-3f83b2e48862:
+                required: false
+                sortOrder: 2
+              c870d54d-fc33-4ae2-9800-2ab919801eb6:
+                required: false
+                sortOrder: 3
+              fcaeff1b-3048-480e-aaab-d1c500c29e5e:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      1d701a98-391c-4436-a2fe-3f83b2e48862:
+        contentColumnType: text
+        fieldGroup: null
+        handle: contentPlain
+        instructions: 'Use this for content that doesn''t require custom styling'
+        name: 'Content Plain'
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: '1'
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      c870d54d-fc33-4ae2-9800-2ab919801eb6:
+        contentColumnType: text
+        fieldGroup: null
+        handle: contentHtml
+        instructions: 'Use this field for content that requires custom styling'
+        name: 'Content HTML'
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes:
+            - f15fa10d-026b-4f9c-88f5-ca84334c8615
+          cleanupHtml: '1'
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+      fcaeff1b-3048-480e-aaab-d1c500c29e5e:
+        contentColumnType: text
+        fieldGroup: null
+        handle: heading
+        instructions: ''
+        name: Heading
+        searchable: true
+        settings:
+          charLimit: ''
+          code: ''
+          columnType: text
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+    handle: card
+    name: Card
+    sortOrder: 3
 plugins:
   architect:
     edition: standard
@@ -373,11 +898,21 @@ sections:
     enableVersioning: true
     entryTypes:
       b9d8c4f7-66f2-4dc3-a6d1-cc8525bf3a89:
+        fieldLayouts:
+          258b6883-ed48-4341-9f6a-30e713310118:
+            tabs:
+              -
+                fields:
+                  c6258fc4-3e46-4cd8-a367-bd83edca4f7d:
+                    required: false
+                    sortOrder: 1
+                name: Products
+                sortOrder: 1
         handle: products
         hasTitleField: true
         name: Products
         sortOrder: 1
-        titleFormat: null
+        titleFormat: ''
         titleLabel: Title
     handle: products
     name: Products
@@ -386,9 +921,9 @@ sections:
       e2d75038-c4ed-417b-8edb-5a1037eaf3b0:
         enabledByDefault: true
         hasUrls: true
-        template: products/entry
-        uriFormat: 'products/{slug}'
-    type: channel
+        template: products/index.twig
+        uriFormat: /products
+    type: single
   82a69350-9107-4234-a575-59ba64b45ed5:
     enableVersioning: true
     entryTypes:
@@ -499,6 +1034,54 @@ sections:
         template: about/_entry.twig
         uriFormat: about
     type: single
+  ffc7df34-fdb5-457c-aa15-5b93b9146df8:
+    enableVersioning: true
+    entryTypes:
+      e9c310fb-2b5b-4a95-a522-40aba5a5498c:
+        fieldLayouts:
+          730913d5-5a1d-4e6f-86b8-8217959ee9e7:
+            tabs:
+              -
+                fields:
+                  36e81bca-7d11-444f-a986-5eec1750f2ce:
+                    required: false
+                    sortOrder: 6
+                  4e3b0fd7-0344-47a9-9019-0791d342c2c0:
+                    required: false
+                    sortOrder: 5
+                  85bce812-c924-4def-99ff-bbacbe7a9ea4:
+                    required: true
+                    sortOrder: 7
+                  91eb4bde-939b-40e4-9fe7-9e06a48b7c20:
+                    required: false
+                    sortOrder: 1
+                  ada36bad-7416-4fc6-b7b1-823fbaeff868:
+                    required: false
+                    sortOrder: 3
+                  c506b7ea-fb2d-482c-895c-6314a4b3f804:
+                    required: true
+                    sortOrder: 2
+                  dffa1967-b783-4747-82e2-23d1b23371b9:
+                    required: false
+                    sortOrder: 4
+                name: Product
+                sortOrder: 1
+        handle: productItem
+        hasTitleField: true
+        name: 'Product Item'
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: productItems
+    name: 'Product Items'
+    propagateEntries: true
+    siteSettings:
+      e2d75038-c4ed-417b-8edb-5a1037eaf3b0:
+        enabledByDefault: true
+        hasUrls: true
+        template: products/_entry.twig
+        uriFormat: 'products/{slug}'
+    type: channel
 siteGroups:
   63404c82-7eba-42b0-9ed2-01ffc278562e:
     name: Comphanny

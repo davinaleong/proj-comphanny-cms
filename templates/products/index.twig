@@ -1,0 +1,47 @@
+{% extends "_layouts/main" %}
+
+{% block main %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="./"><i class="fal fa-elephant"></i></a></li>
+    <li class="breadcrumb-item active" aria-current="page">Products</li>
+  </ol>
+</nav>
+
+{% set productEntry = entry %}
+<section class="container my-5">
+  <div class="mb-3 d-flex justify-content-center align-items-center">
+    <h2 class="section-heading"><i class="fal fa-box"></i> Products</h2>
+  </div>
+
+  {% if productEntry.productHtml %}
+  <div class="mb-3">{{ productEntry.productHtml }}</div>
+  {% endif %}
+
+  {% set itemEntries = craft.entries.section('productItems')
+    .orderBy('postDate desc').limit(21).all() %}
+  <div class="row">
+    {% for itemEntry in itemEntries %}
+    <div class="col-12 col-lg-4">
+        <div class="card mb-3 shadow-sm">
+        <a href="{{ itemEntry.url }}">
+            <img src="{{ itemEntry.productBanner.one().getUrl('thumbBannerSm') }}" class="card-img-top" alt="product thumbnail">
+          </a>
+        <div class="card-body">
+          <div class="mb-2">
+            {% for category in itemEntry.productTypes %}
+            <span class="badge badge-cphy-primary-xlight"><i class="{{ category.typeIcon }} fa-fw"></i> {{ category.title }}</span>
+            {% endfor %}
+          </div>
+
+          <h5 class="card-title">{{ itemEntry.title }}</h5>
+          <p><em class="text-muted small">{{ itemEntry.postDate | date(dateFormat) }}</em></p>
+
+          <a href="{{ itemEntry.url }}" class="btn btn-primary btn-sm">View more <i class="fal fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div><!-- ./row -->
+</section>
+{% endblock %}
